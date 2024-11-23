@@ -255,9 +255,13 @@ class DataLoader
         if (!empty($langusage)) {
             if ($use_acf) {
                 // delete all rows
-                for ($i = 1; $i <= count(get_field('ead_langusage', $post_id)); $i++) {
-                    delete_row('ead_langusage', $i, $post_id);
+                $current_rows = get_field('ead_langusage', $post_id);
+                if (is_array($current_rows)) {
+                    foreach (array_keys($current_rows) as $index) {
+                        delete_row('ead_langusage', $index + 1, $post_id);
+                    }
                 }
+                $langusage = array_unique($langusage, SORT_REGULAR);
                 foreach ($langusage as $row) {
                     add_row('ead_langusage', $row, $post_id);
                 }
@@ -267,14 +271,19 @@ class DataLoader
             }
         }
 
+
         // For langmaterial
         $langmaterial = $this->prepareRepeater($this->getLangmaterial());
         if (!empty($langmaterial)) {
             if ($use_acf) {
                 // delete all rows
-                for ($i = 1; $i <= count(get_field('ead_langmaterial', $post_id)); $i++) {
-                    delete_row('ead_langmaterial', $i, $post_id);
+                $current_rows = get_field('ead_langmaterial', $post_id);
+                if (is_array($current_rows)) {
+                    foreach (array_keys($current_rows) as $index) {
+                        delete_row('ead_langmaterial', $index + 1, $post_id);
+                    }
                 }
+                $langmaterial = array_unique($langmaterial, SORT_REGULAR);
                 foreach ($langmaterial as $row) {
                     add_row('ead_langmaterial', $row, $post_id);
                 }
@@ -284,14 +293,19 @@ class DataLoader
             }
         }
 
+
         // For periode (unitdate)
         $periode = $this->prepareRepeater($this->getUnitdate());
         if (!empty($periode)) {
             if ($use_acf) {
                 // delete all rows
-                for ($i = 1; $i <= count(get_field('ead_periode', $post_id)); $i++) {
-                    delete_row('ead_periode', $i, $post_id);
+                $current_rows = get_field('ead_periode', $post_id);
+                if (is_array($current_rows)) {
+                    foreach (array_keys($current_rows) as $index) {
+                        delete_row('ead_periode', $index + 1, $post_id);
+                    }
                 }
+                $periode = array_unique($periode, SORT_REGULAR);
                 foreach ($periode as $row) {
                     add_row('ead_periode', $row, $post_id);
                 }
@@ -317,9 +331,13 @@ class DataLoader
 
             if ($use_acf) {
                 // delete all rows
-                for ($i = 1; $i <= count(get_field('ead_physdesc', $post_id)); $i++) {
-                    delete_row('ead_physdesc', $i, $post_id);
+                $current_rows = get_field('ead_physdesc', $post_id);
+                if (is_array($current_rows)) {
+                    foreach (array_keys($current_rows) as $index) {
+                        delete_row('ead_physdesc', $index + 1, $post_id);
+                    }
                 }
+                $physdesc_data = array_unique($physdesc_data, SORT_REGULAR);
                 foreach ($physdesc_data as $row) {
                     add_row('ead_physdesc', $row, $post_id);
                 }
