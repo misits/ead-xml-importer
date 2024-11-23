@@ -1,0 +1,404 @@
+body.toplevel_page_ead-xml-importer {
+    background-color: #FFF;
+    color: #1d2327 !important;
+}
+
+body.toplevel_page_ead-xml-importer .wrap {
+    margin-top: 20px;
+}
+
+#ead-xml-importer.wrap div.updated {
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+#ead-xml-importer .exi_hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+#ead-xml-importer .flex {
+    display: flex;
+}
+
+#ead-xml-importer .item-center {
+    align-items: center;
+}
+
+#ead-xml-importer .grid-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-gap: 10px;
+}
+
+#ead-xml-importer .flex-col {
+    flex-direction: column;
+}
+
+#ead-xml-importer .gap-10 {
+    gap: 10px;
+}
+
+#ead-xml-importer .mt-10 {
+    margin-top: 10px;
+}
+
+#ead-xml-importer .form-group {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+#ead-xml-importer .exi_post_meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-gap: 10px;
+}
+
+#exi-logs .exi-content {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#exi-logs .exi-content ul {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    #ead-xml-importer .exi_post_meta {
+        grid-template-columns: 1fr;
+    }
+}
+
+#ead-xml-importer input[type="text"],
+#ead-xml-importer input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#ead-xml-importer select {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #1d2327;
+}
+
+#ead-xml-importer select:focus,
+#ead-xml-importer select:hover {
+    border-color: #1d2327;
+    box-shadow: 0 0 0 1px #1d2327;
+}
+
+#ead-xml-importer .form-group label {
+    font-weight: bold;
+}
+
+#exi-settings .buttons {
+    margin-top: 40px;
+}
+
+#ead-xml-importer .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+#ead-xml-importer .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#ead-xml-importer .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+#ead-xml-importer .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+#ead-xml-importer input:checked + .slider {
+    background-color: #1d2327;
+}
+
+#ead-xml-importer input:checked + .slider:before {
+    transform: translateX(25px);
+}
+
+
+body.toplevel_page_ead-xml-importer button.button-primary {
+    padding: 8px 16px;
+    min-width: 150px;
+    background-color: #1d2327;
+    color: #FFF;
+    border-color: #1d2327;
+    border-radius: 4px;
+}
+
+body.toplevel_page_ead-xml-importer button.button-secondary {
+    padding: 8px 16px;
+    min-width: 150px;
+    background-color: #FFF;
+    color: #1d2327;
+    border-color: #1d2327;
+    border-radius: 4px;
+}
+
+body.toplevel_page_ead-xml-importer button.button-secondary:hover {
+    border-color: #2b3034;
+    color: #1d2327;
+}
+
+body.toplevel_page_ead-xml-importer button.button-primary:hover {
+    background-color: #2b3034;
+    border-color: #2b3034;
+}
+
+
+.exi-toggle .exi-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.exi-toggle.exi-open .exi-arrow {
+    transform: rotate(180deg);
+}
+
+.exi-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.exi-section-head .flex {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.exi-section .exi-section-head {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 4px;
+    padding: 20px;
+    position: relative;
+}
+
+.exi-section .exi-section-head h1 {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.exi-content {
+    display: none;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.exi-content .submit {
+    padding: 0;
+}
+
+.exi-content .form-table tr,
+.exi-content .form-table td {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.exi-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.exi-toggle span.desc {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .exi-toggle span.desc {
+        display: none;
+    }
+}
+
+/* Admin notice styling with animations */
+.toplevel_page_ead-xml-importer .notice {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    animation: fadeInOut 5s ease forwards;
+    border-radius: 4px;
+    opacity: 0;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+        display: none;
+    }
+}
+
+/* Optional: Pause animation on hover */
+.toplevel_page_ead-xml-importer .notice:hover {
+    animation-play-state: paused;
+}
+
+/* Make sure dismiss button is still clickable */
+.toplevel_page_ead-xml-importer .notice .notice-dismiss {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    color: #787c82;
+    cursor: pointer;
+}
+
+/* Improve text readability */
+.toplevel_page_ead-xml-importer .notice p {
+    margin: 0.5em 0;
+    padding: 2px;
+    line-height: 1.4;
+}
+
+
+.exi-progress-bar {
+    width: 100%;
+    height: 15px;
+    background-color: #f0f0f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    padding: 1px; /* Add padding for a better inner shadow effect */
+    box-shadow: inset 0 1px 1px rgba(#1d2327, 0.2);
+}
+
+.exi-progress-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #55efc4 0%, #00b894 100%);
+    transition: width 0.3s ease-in-out;
+    box-shadow: 0 1px 1px -2px rgba(0, 0, 0, 0.2);
+    /* Add animated gradient */
+    background-size: 200% 100%;
+    animation: gradientShift 2s ease infinite;
+}
+
+/* Animation for the gradient movement */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Alternative gradients you might like: */
+
+/* Blue to Purple */
+.exi-progress-fill.blue-purple {
+    background: linear-gradient(90deg, #74b9ff 0%, #6c5ce7 100%);
+}
+
+/* Green to Blue */
+.exi-progress-fill.green-blue {
+    background: linear-gradient(90deg, #00b894 0%, #0984e3 100%);
+}
+
+/* Sunset */
+.exi-progress-fill.sunset {
+    background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+}
+
+/* Ocean */
+.exi-progress-fill.ocean {
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Tree */
+.exi-progress-fill.ocean {
+    background: linear-gradient(90deg, #55efc4 0%, #00b894 100%);
+}
+
+/* Progress status */
+.exi-progress-status {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.exi-progress-log {
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #FFF;
+    border-radius: 4px;
+}
+
+.exi-log-error {
+    color: #d63031;
+}
+
+.exi-log-success {
+    color: #00b894;
+}

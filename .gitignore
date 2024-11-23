@@ -1,0 +1,51 @@
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE and editor config files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+
+# Ignore node modules and dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore Composer dependencies (if using PHP Composer)
+vendor/
+composer.lock
+
+# Ignore build artifacts
+*.log
+*.cache
+*.tmp
+*.gz
+*.zip
+*.sql
+
+# Ignore compiled CSS/JS files (if generated)
+*.min.css
+*.min.js
+*.map
+
+# Ignore unnecessary WP files
+__MACOSX/
+wp-config.php
+wp-content/uploads/
+wp-content/advanced-cache.php
+
+# Ignore sensitive information
+.env
+*.env
+
+# Ignore other specific files
+package-lock.json
+dist/
+build/
+.env.local
+.env.production
+coverage/
