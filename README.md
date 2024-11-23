@@ -70,16 +70,28 @@ Configure your XML sources in the WordPress admin under Settings > EAD XML Impor
 
 ```bash
 ead-xml-importer/
+├── admin/
+│   ├── handlers/
+│   │   └── data-handler.php
+│   └── templates/
+│       ├── admin-template.php
+│       └── sections/
+│           ├── ead-fetch.php
+│           └── ead-settings.php
+├── assets/
+│   ├── css/
+│   │   └── admin.css
+│   └── js/
+│       └── admin.js
 ├── includes/
+│   ├── class-admin-page.php
 │   ├── class-data-loader.php
 │   ├── class-loader.php
-│   └── functions.php
-├── admin/
-│   ├── css/
-│   ├── js/
-│   └── class-admin.php
+│   └── class-logger.php
+├── utils/
+│   └── plugin-update-checker
 ├── languages/
-│   └── ead-xml-importer.pot
+├── logs/
 ├── index.php
 ├── ead-xml-importer.php
 ├── uninstall.php
