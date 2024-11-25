@@ -8,14 +8,7 @@ class AdminPage {
         $selected_post_type = get_option('exi_post_type', 'archive');
         $selected_cron_interval = get_option('exi_cron_interval', 'hourly');
         $last_sync = get_option('exi_last_sync', 'Never');
-        $next_sync = wp_next_scheduled('exi_cron_hook');
-
-        // Is cron enabled?
-        if (!wp_next_scheduled('exi_cron_hook')) {
-            $next_sync = __('Disabled', 'ead-xml-importer');
-        } else {
-            $next_sync = $next_sync ? date('Y-m-d H:i:s', $next_sync) : __('Not scheduled', 'ead-xml-importer');
-        }
+        $next_sync = wp_next_scheduled('exi_cron_hook') ?: false;
 
         return [
             'post_types' => get_post_types(['public' => true], 'objects'),
